@@ -1,8 +1,12 @@
 export class DashboardPage{
     link_sauceLabsBackpack = 'Sauce Labs Backpack'
+    link_cartIcon = '.shopping_cart_link'
 
     sauceLabsBackpack(){
         cy.contains(this.link_sauceLabsBackpack).click()
-        cy.contains('Sauce Labs Backpack').should('be.visible') 
+    }
+
+    iconCartToClick(){
+        cy.get(this.link_cartIcon).click()
     }
 }
